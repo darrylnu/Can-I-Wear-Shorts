@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         
         print(cityField.text)
         
-        let url = NSURL(string: "http://www.weather-forecast.com/locations/\(cityField.text!)/forecasts/latest")!
+        let url = NSURL(string: "http://www.weather-forecast.com/locations/\(cityField.text!.stringByReplacingOccurrencesOfString(" ", withString: "-"))/forecasts/latest")!
         
         cityField.text = ""
         

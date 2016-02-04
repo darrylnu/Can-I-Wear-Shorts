@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,22 +18,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="summer.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="FHd-eW-qhN">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="summer.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="FHd-eW-qhN">
+                                <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter your city..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOd-s5-pjP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your city..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOd-s5-pjP">
                                 <rect key="frame" x="83" y="97" width="155" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="13h-nH-OZX"/>
+                                    <constraint firstAttribute="height" constant="21" id="d9Y-mI-Qex"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E.g Gary, Chicago" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LAA-nD-HPy">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E.g Gary, Chicago" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LAA-nD-HPy">
                                 <rect key="frame" x="20" y="138" width="280" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PDu-mW-5fa"/>
+                                    <constraint firstAttribute="width" constant="280" id="jPZ-hg-uTx"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69G-gL-HZo">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69G-gL-HZo">
                                 <rect key="frame" x="96" y="176" width="128" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="9iV-1a-lAh"/>
+                                    <constraint firstAttribute="height" constant="37" id="lhK-DE-uPg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <state key="normal" title="Check Weather">
                                     <color key="titleColor" red="0.23747604882536655" green="0.63504014968056244" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -41,20 +54,52 @@
                                     <action selector="fetchWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gfj-co-G4h"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Can I wear Shorts?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPI-8L-DRZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Can I wear Shorts?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPI-8L-DRZ">
                                 <rect key="frame" x="20" y="33" width="280" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="UCp-Y3-Ih1"/>
+                                    <constraint firstAttribute="height" constant="56" id="jQT-SC-ma2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="32"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxD-yA-G8m">
-                                <rect key="frame" x="20" y="315" width="280" height="154"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxD-yA-G8m">
+                                <rect key="frame" x="20" y="265" width="280" height="154"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="ubX-Gm-3uO"/>
+                                    <constraint firstAttribute="height" constant="154" id="yrP-vs-TGo"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LPI-8L-DRZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="3Y5-eL-bUK"/>
+                            <constraint firstItem="69G-gL-HZo" firstAttribute="top" secondItem="LAA-nD-HPy" secondAttribute="bottom" constant="8" id="80Z-dp-Dom"/>
+                            <constraint firstItem="gOd-s5-pjP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Yv-HR-nrz"/>
+                            <constraint firstItem="69G-gL-HZo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C1m-L8-IgV"/>
+                            <constraint firstItem="LPI-8L-DRZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DUG-ap-Mzi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FHd-eW-qhN" secondAttribute="bottom" id="HpT-Ri-PaW"/>
+                            <constraint firstItem="gOd-s5-pjP" firstAttribute="top" secondItem="LPI-8L-DRZ" secondAttribute="bottom" constant="8" id="N2w-tN-Yqu"/>
+                            <constraint firstItem="RxD-yA-G8m" firstAttribute="top" secondItem="69G-gL-HZo" secondAttribute="bottom" constant="102" id="Nu1-cN-h5V"/>
+                            <constraint firstItem="LAA-nD-HPy" firstAttribute="top" secondItem="gOd-s5-pjP" secondAttribute="bottom" constant="20" id="OHz-Zn-FWX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FHd-eW-qhN" secondAttribute="trailing" constant="-20" id="Swj-tF-88G"/>
+                            <constraint firstItem="LAA-nD-HPy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aq8-o8-D6h"/>
+                            <constraint firstItem="FHd-eW-qhN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="cUQ-5a-bb8"/>
+                            <constraint firstItem="RxD-yA-G8m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ek6-uW-mHd"/>
+                            <constraint firstItem="FHd-eW-qhN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="li7-nx-dgW"/>
+                            <constraint firstItem="RxD-yA-G8m" firstAttribute="top" secondItem="69G-gL-HZo" secondAttribute="bottom" constant="52" id="ndI-PW-Q7Y"/>
+                            <constraint firstItem="RxD-yA-G8m" firstAttribute="top" secondItem="69G-gL-HZo" secondAttribute="bottom" constant="35" id="pzt-6B-FGy"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Nu1-cN-h5V"/>
+                                <exclude reference="pzt-6B-FGy"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
