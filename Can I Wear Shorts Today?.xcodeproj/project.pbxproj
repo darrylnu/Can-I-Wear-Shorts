@@ -12,7 +12,7 @@
 		17EE483F1C62F4AE006BC166 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17EE483D1C62F4AE006BC166 /* Main.storyboard */; };
 		17EE48411C62F4AE006BC166 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17EE48401C62F4AE006BC166 /* Assets.xcassets */; };
 		17EE48441C62F4AE006BC166 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17EE48421C62F4AE006BC166 /* LaunchScreen.storyboard */; };
-		17EE48501C6319E8006BC166 /* summer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17EE484F1C6319E8006BC166 /* summer.jpg */; };
+		17EE48521C632CA1006BC166 /* HD_Nature_Scene_Wallpaper_11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17EE48511C632CA1006BC166 /* HD_Nature_Scene_Wallpaper_11.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		17EE48401C62F4AE006BC166 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17EE48431C62F4AE006BC166 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17EE48451C62F4AE006BC166 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		17EE484F1C6319E8006BC166 /* summer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = summer.jpg; sourceTree = "<group>"; };
+		17EE48511C632CA1006BC166 /* HD_Nature_Scene_Wallpaper_11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HD_Nature_Scene_Wallpaper_11.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 				17EE48391C62F4AE006BC166 /* AppDelegate.swift */,
 				17EE483B1C62F4AE006BC166 /* ViewController.swift */,
 				17EE483D1C62F4AE006BC166 /* Main.storyboard */,
-				17EE484F1C6319E8006BC166 /* summer.jpg */,
+				17EE48511C632CA1006BC166 /* HD_Nature_Scene_Wallpaper_11.jpg */,
 				17EE48401C62F4AE006BC166 /* Assets.xcassets */,
 				17EE48421C62F4AE006BC166 /* LaunchScreen.storyboard */,
 				17EE48451C62F4AE006BC166 /* Info.plist */,
@@ -126,7 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17EE48441C62F4AE006BC166 /* LaunchScreen.storyboard in Resources */,
-				17EE48501C6319E8006BC166 /* summer.jpg in Resources */,
+				17EE48521C632CA1006BC166 /* HD_Nature_Scene_Wallpaper_11.jpg in Resources */,
 				17EE48411C62F4AE006BC166 /* Assets.xcassets in Resources */,
 				17EE483F1C62F4AE006BC166 /* Main.storyboard in Resources */,
 			);

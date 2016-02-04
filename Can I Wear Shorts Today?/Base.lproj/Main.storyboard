@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="summer.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="FHd-eW-qhN">
+                            <imageView userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HD_Nature_Scene_Wallpaper_11.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="FHd-eW-qhN">
                                 <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your city..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOd-s5-pjP">
@@ -28,7 +28,7 @@
                                     <constraint firstAttribute="height" constant="21" id="d9Y-mI-Qex"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E.g Gary, Chicago" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LAA-nD-HPy">
@@ -46,9 +46,9 @@
                                     <constraint firstAttribute="width" constant="128" id="9iV-1a-lAh"/>
                                     <constraint firstAttribute="height" constant="37" id="lhK-DE-uPg"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="Check Weather">
-                                    <color key="titleColor" red="0.23747604882536655" green="0.63504014968056244" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.20214840457131283" green="0.33765381357573571" blue="0.78932291666666665" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="fetchWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gfj-co-G4h"/>
@@ -65,13 +65,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxD-yA-G8m">
-                                <rect key="frame" x="20" y="265" width="280" height="154"/>
+                                <rect key="frame" x="20" y="228" width="280" height="154"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="ubX-Gm-3uO"/>
                                     <constraint firstAttribute="height" constant="154" id="yrP-vs-TGo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -87,6 +86,7 @@
                             <constraint firstItem="RxD-yA-G8m" firstAttribute="top" secondItem="69G-gL-HZo" secondAttribute="bottom" constant="102" id="Nu1-cN-h5V"/>
                             <constraint firstItem="LAA-nD-HPy" firstAttribute="top" secondItem="gOd-s5-pjP" secondAttribute="bottom" constant="20" id="OHz-Zn-FWX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FHd-eW-qhN" secondAttribute="trailing" constant="-20" id="Swj-tF-88G"/>
+                            <constraint firstItem="RxD-yA-G8m" firstAttribute="top" secondItem="69G-gL-HZo" secondAttribute="bottom" constant="15" id="YTG-qy-K51"/>
                             <constraint firstItem="LAA-nD-HPy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aq8-o8-D6h"/>
                             <constraint firstItem="FHd-eW-qhN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="cUQ-5a-bb8"/>
                             <constraint firstItem="RxD-yA-G8m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ek6-uW-mHd"/>
@@ -97,6 +97,7 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Nu1-cN-h5V"/>
+                                <exclude reference="ndI-PW-Q7Y"/>
                                 <exclude reference="pzt-6B-FGy"/>
                             </mask>
                         </variation>
@@ -113,6 +114,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="summer.jpg" width="3840" height="2160"/>
+        <image name="HD_Nature_Scene_Wallpaper_11.jpg" width="1920" height="1200"/>
     </resources>
 </document>
