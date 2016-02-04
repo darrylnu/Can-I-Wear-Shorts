@@ -17,35 +17,39 @@ class ViewController: UIViewController {
 
     @IBAction func fetchWeather(sender: AnyObject) {
         
-        print(cityField.text)
         
-        let url = NSURL(string: "http://www.weather-forecast.com/locations/\(cityField.text!.stringByReplacingOccurrencesOfString(" ", withString: "-"))/forecasts/latest")!
+        let attemptedUrl = NSURL(string: "http://www.weather-forecast.com/locations/\(cityField.text!.stringByReplacingOccurrencesOfString(" ", withString: "-"))/forecasts/latest")
         
         cityField.text = ""
         
-        
-        let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) -> Void in
-            
-            if data != nil {
+        if let url = attemptedUrl {
+            let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) -> Void in
                 
-                let webData = NSString(data: data!, encoding: NSUTF8StringEncoding)
-                let weatherDataHalf = webData?.componentsSeparatedByString("3 Day Weather Forecast Summary:</b><span class=\"read-more-small\"><span class=\"read-more-content\"> <span class=\"phrase\">")
-                
-                if weatherDataHalf!.count > 0 {
+                if data != nil {
                     
-                    let weatherRead = weatherDataHalf![1].componentsSeparatedByString("</span")
+                    let webData = NSString(data: data!, encoding: NSUTF8StringEncoding)
+                    let weatherDataHalf = webData?.componentsSeparatedByString("3 Day Weather Forecast Summary:</b><span class=\"read-more-small\"><span class=\"read-more-content\"> <span class=\"phrase\">")
                     
-                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                         self.weatherDisplayLabel.text = weatherRead[0].stringByReplacingOccurrencesOfString("&deg;", withString: "\u{00B0}")
-                    })
-                   
-                } else {
-                    self.weatherDisplayLabel.text = "Please enter in a city to see the weather."
+                    if weatherDataHalf!.count > 1 {
+                        
+                        let weatherRead = weatherDataHalf![1].componentsSeparatedByString("</span")
+                        
+                        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                             self.weatherDisplayLabel.text = weatherRead[0].stringByReplacingOccurrencesOfString("&deg;", withString: "\u{00B0}")
+                        })
+                       
+                    } else {
+                        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                            self.weatherDisplayLabel.text = "Please enter in a valid city to see the weather."
+                        })
+                    }
                 }
+                
             }
-        
-        }
         task.resume()
+        }  else {
+            self.weatherDisplayLabel.text = "Couldn't find weather for that city, please try again."
+        }
         
     }
     
