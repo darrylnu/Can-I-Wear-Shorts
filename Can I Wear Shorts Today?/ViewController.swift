@@ -21,6 +21,8 @@ class ViewController: UIViewController {
         
         let url = NSURL(string: "http://www.weather-forecast.com/locations/\(cityField.text!)/forecasts/latest")!
         
+        cityField.text = ""
+        
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) -> Void in
             
@@ -30,14 +32,15 @@ class ViewController: UIViewController {
                 let weatherDataHalf = webData?.componentsSeparatedByString("3 Day Weather Forecast Summary:</b><span class=\"read-more-small\"><span class=\"read-more-content\"> <span class=\"phrase\">")
                 
                 if weatherDataHalf!.count > 0 {
+                    
                     let weatherRead = weatherDataHalf![1].componentsSeparatedByString("</span")
                     
-                    print(weatherRead[0])
-                    
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                         self.weatherDisplayLabel.text = weatherRead[0]
+                         self.weatherDisplayLabel.text = weatherRead[0].stringByReplacingOccurrencesOfString("&deg;", withString: "\u{00B0}")
                     })
                    
+                } else {
+                    self.weatherDisplayLabel.text = "Please enter in a city to see the weather."
                 }
             }
         
